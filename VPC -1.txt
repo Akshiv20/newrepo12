@@ -1,0 +1,215 @@
+Virtual private Cloud - Network Engineering - IaaS
+--------------------------------------------------
+
+1. ESSENTIAL OF VPC:
+Traditional system : Own Data Center - 
+Activity Like EOD batch run - ATOS ORIGIN - Third party Data Center
+
+CTS      TCS 
+DC       DC
+         
+
+VPC - OWN DC / OWN NETWORK 
+CLOUD-APPLICATION - 
+
+
+=> Security, Response Time Quick, Business Continity Plan high level, Highly Available
+   
+
+2. GLOBAL ARCHITECTURE:
+
+PUBLIC SUBNET
+https://www.hdfcbank.com/ - APPLICATION URL
+Personal
+NRI
+SME
+Wholesale
+Agri
+
+Benefits:
+Helps to understand the business running in the hdfcbank application
+20000 - traffics per seconds - Public Subnet - slowness in webserver
+10% - 2000 - Post Authentication - Private Subnet 
+
+=>90% --Application performance always fast 
+
+
+Validation:
+Authentication:
+Customer ID/ User ID
+Password
+Security Server + Security Db = "Your ID and IPIN do not match. Please try again"
+
+
+Private Subnet:
+Application Server 
+Personal
+NRI
+SME
+Wholesale
+Agri       - online Transactions - Database server
+
+
+
+3. 
+2-tier -  Web or App + db
+3-tier -  web + app + db
+
+
+4. IP - Communicating two comp systems 
+from 0 to 255 - Logic
+987.34.56.78  - w
+p24.t67.h78.n90 - w
+173.45.67.89    - r
+
+
+5. 
+IPv4 - 32-bit, Numerical Numbers allowed, 215 crores private ips, 
+IPv6 - 128-bit, Alphanumeric allowed, 860 crs pri ips - Work in progress 
+       Android Application - Implemented 
+
+
+6.
+Public Ip  - Remote user Connection, Globally Unique, GLOBAL NETWORK INTERFACE TEAM, Dynamic Public IP
+Dynamic - When we reboot, Auto-assign Public IP from GNIT to aws user 
+Static  - constant, When we reboot it wont changes, Allocate from amazon pool TO AWS USER,  
+
+
+10.23.45.67 - hdfcbank
+10.23.45.67 - scb
+
+ip conflicts 
+No proper connection with apps
+
+
+Private IP - Static, Host to Host Connection, Linking and Automation
+             Application-Specific
+CTS - 10.0.0.0
+TSC - 172.45.34.67
+
+
+
+7.
+Monolythic    - Single layer,Single Framework, tightly coupled, TS-Impacts customers
+                High level of Business and customer impact
+Microservices - Multi layer,Multi Framework, Loosly coupled, TS-No or Low
+                No or Low level  Business and customer impact
+
+Application Load balancer - "Path based routing" - 95% industry adoption
+Microservices architecture
+Network Load Balancer:
+8009
+9009
+7007
+6004
+3005
+
+
+
+8.
+Cloud Service provider : aws  - 215CRS IPS 
+Company : CTS  - 65536 PRI IPS
+Peter Non-techie  : HDFCBANK  - {PUBLIC SUBNET + AUTHENTICATION + PRIVATE SUBNET}
+                                 256 pri ips  + Auth + 256 pri ips
+
+Load balancer - Distributes traffics to the available resources
+Autoscalling - Scale-up and Scale-down
+route 53: domain register - simple routing policy
+
+
+9. CIDR - Classless Interdomain Calculator
+aws ips : 215 crs
+CTS : 65536 IPS  - 10.0.0.0
+HDFC : 256 + 256
+
+10.0.0.0/32   -  1
+10.0.0.0/33   -  "Invalid CIDR format"
+10.0.0.0/31   -  2
+10.0.0.0/29   -  8
+10.0.0.0/28   -  8
+
+10.0.0.0/24   -  256
+10.0.0.0/16   -  65,536
+
+
+10.0.0.0/1   -  2,147,483,648
+
+
+public subnet : 10.0.1.0/24 -256
+Private subnet : 10.0.2.0/24 -256
+
+formula = diff = tot bit size of ipv4 - cidr value
+               = 32 - 28 = 4
+2 to the power of diff(4) = 2*2*2*2 = 16
+
+
+
+
+10. Scope of the Project: RESTRICT REMOTE USER ACCESS THE PRIVATE SUBNET DIRECTLY
+                       
+
+ 
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
